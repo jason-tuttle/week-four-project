@@ -7,10 +7,28 @@ body {
   text-align: center;
 }
 
-input[type="submit"] {
+input {
   font-size: 1.2em;
+}
+
+input[type="submit"] {
   background-color: lightgrey;
   border: none;
   border-bottom: 2px solid darkgrey;
   border-radius: 4px;
+}
+
+.results {
+  border: 1px solid white;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.track {
+  flex: 1 1 20%;
+}
+
+.track > img {
+  width: 100px;
+  height: 100px;
 }
