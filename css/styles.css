@@ -1,3 +1,16 @@
 body {
+  margin: 0;
+  padding: 0;
   background-color: #60d9f1;
+  font-family: sans-serif;
+  font-size: 1rem;
+  text-align: center;
+}
+
+input[type="submit"] {
+  font-size: 1.2em;
+  background-color: lightgrey;
+  border: none;
+  border-bottom: 2px solid darkgrey;
+  border-radius: 4px;
 }

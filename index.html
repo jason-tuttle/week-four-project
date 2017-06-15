@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>SoundCloud Music Search</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <div class="container">
@@ -13,12 +13,14 @@
       <audio class="music-player" controls="controls" src=""></audio>
     </section>
     <section class="search">
-      <form class="search-form">
-        
+      <form class="search-form" onsubmit="performSearch()">
+        <input type="text" id="search-text" name="search" value="" placeholder="Search For Artist...">
+        <input type="submit" id="search" name="" value="Search">
       </form>
     </section>
     <section class="results"></section>
   </div>
-  <script src="main.js"></script>
+  <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
+  <script src="scripts/main.js"></script>
 </body>
 </html>
