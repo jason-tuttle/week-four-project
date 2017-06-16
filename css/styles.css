@@ -32,3 +32,12 @@ input[type="submit"] {
   width: 100px;
   height: 100px;
 }
+
+.artist-name {
+  font-size: 1.2em;
+}
+
+.track-title {
+  font-size: 0.8em;
+  font-stretch: condensed;
+}

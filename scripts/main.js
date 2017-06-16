@@ -15,6 +15,13 @@
   const searchText = document.querySelector('#search-text');
   const doSearch = document.querySelector('#search');
   const results = document.querySelector('.results');
+  results.addEventListener('click', function(e) {
+    console.log(e);
+    getAudioFile(e);
+  });
+  // the widget
+  var widgetIframe = document.getElementById('sc-widget'),
+        widget       = SC.Widget(widgetIframe);
 
 
   // 2. Create your `onSubmit` event for getting the user's search term
@@ -48,6 +55,7 @@
       console.log("I'm building a trackbox...");
       let trackBox = document.createElement('div');
       trackBox.classList.add('track');
+      trackBox.setAttribute('data-track-id', track.id);
       let trackImg = document.createElement('img');
       if (track.artwork_url) {
         trackImg.setAttribute('src', track.artwork_url);
@@ -55,8 +63,10 @@
         trackImg.setAttribute('src', 'images/record_blank.jpeg');
       }
       let trackArtist = document.createElement('p');
+      trackArtist.classList.add('artist-name');
       trackArtist.textContent = track.user.username;
       let trackTitle = document.createElement('p');
+      trackTitle.classList.add('track-title');
       trackTitle.textContent = track.title;
       trackBox.appendChild(trackImg);
       trackBox.appendChild(trackTitle);
@@ -66,7 +76,18 @@
   }
 
   // 5. Create a way to listen for a click that will play the song in the audio play
-
+  // .target.parentElement.dataset.url
+  function getAudioFile(event) {
+    const audioURL = "/track/" + event.target.parentElement.dataset.trackId;
+    widget.bind(SC.Widget.Events.READY, function() {
+      // load new widget
+      widget.bind(SC.Widget.Events.FINISH, function() {
+        widget.load(audioURL, {
+          show_artwork: true
+        });
+      });
+    });
+  }
 
 
 
