@@ -10,19 +10,19 @@
       <h1>Really Awesome Music Site</h1>
     </header>
     <section class="player">
-      <iframe id="sc-widget" src="https://w.soundcloud.com/player/?url=http://api.soundcloud.com/users/1539950/favorites" width="100%" height="200" scrolling="no" frameborder="no"></iframe>
+      <iframe id="sc-widget" width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/150503781&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
       <!-- <audio class="music-player" controls="controls" src=""></audio> -->
     </section>
     <section class="search">
       <form class="search-form" onsubmit="performSearch()">
-        <input type="text" id="search-text" name="search" value="" placeholder="Search For Artist...">
+        <input type="text" id="search-text" name="search" value="" placeholder="Search for groovy tunes...">
         <input type="submit" id="search" name="" value="Search">
       </form>
     </section>
     <section class="results"></section>
   </div>
   <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
-  <script src="https://w.soundcloud.com/player/api.js"></script>
+  <script src="scripts/scwidget.js"></script>
   <script src="scripts/main.js"></script>
 </body>
 </html>

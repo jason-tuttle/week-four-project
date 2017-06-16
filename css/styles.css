@@ -7,11 +7,26 @@ body {
   text-align: center;
 }
 
+.player {
+  padding: 25px 10vw;
+}
+
+form {
+  width: 80vw;
+  margin: 50px auto;
+  display: flex;
+  flex-flow: row nowrap;
+  align-content: flex-start;
+}
+
 input {
   font-size: 1.2em;
+  line-height: 2em;
+  flex: 1 0 auto;
 }
 
 input[type="submit"] {
+  flex: none;
   background-color: lightgrey;
   border: none;
   border-bottom: 2px solid darkgrey;
