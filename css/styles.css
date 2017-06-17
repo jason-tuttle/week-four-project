@@ -1,10 +1,34 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #60d9f1;
-  font-family: sans-serif;
+  background-color: #163A40;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 1rem;
   text-align: center;
+}
+header {
+  margin-top: 50px;
+}
+h1, h3 {
+  margin: 0;
+  font-family: 'Modak', fantasy;
+  font-weight: normal;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+h1 {
+  font-size: 8vw;
+  position: relative;
+  top: -0.6em;
+}
+h3 {
+  /*color: lightgrey;*/
+  font-size: 5vw;
+}
+h2 {
+  color: white;
+  background-color: #2C747F;
+  text-shadow: 0 1px 5px black;
 }
 
 .player {
@@ -12,14 +36,19 @@ body {
 }
 
 form {
+  background-color: #2C747F;
   width: 80vw;
-  margin: 50px auto;
+  margin: 25px auto;
+  padding: 20px;
   display: flex;
   flex-flow: row nowrap;
   align-content: flex-start;
+  border: 5px inset;
 }
 
 input {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 300;
   font-size: 1.2em;
   line-height: 2em;
   flex: 1 0 auto;
@@ -31,16 +60,23 @@ input[type="submit"] {
   border: none;
   border-bottom: 2px solid darkgrey;
   border-radius: 4px;
+  font-weight: 700;
 }
 
 .results {
-  border: 1px solid white;
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
 }
 
 .track {
-  flex: 1 1 20%;
+  background-color: #2C747F;
+  color: #59E7FF;
+  border: 1px solid #50D0E5;
+  padding: 20px 5px;
+  margin: 2px 5px;
+  flex: 0 1 200px;
+  box-shadow: 0 2px 5px black;
 }
 
 .track > img {
@@ -49,10 +85,14 @@ input[type="submit"] {
 }
 
 .artist-name {
+  font-weight: 700;
   font-size: 1.2em;
+  text-shadow: 0 1px 5px black;
 }
 
 .track-title {
   font-size: 0.8em;
-  font-stretch: condensed;
+  font-weight: 300;
+  color: white;
+  text-shadow: 0 1px 5px black;
 }
